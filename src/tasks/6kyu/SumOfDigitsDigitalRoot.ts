@@ -9,8 +9,9 @@ export const countBits = function (n) {
 	return count;
 };
 
-// console.log(countBits(0));
-// console.log(countBits(4));
-// console.log(countBits(7));
+const countBitsExample = function (n) {
+	return n.toString(2).split('0').join('').length;
+};
+
 console.log(countBits(9));
 console.log(countBits(12));

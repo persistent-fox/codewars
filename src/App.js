@@ -2,19 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	const countBits = function (n) {
-		let count = 0;
-		while (Math.round(n / 2) >= 1) {
-			if (Math.floor(n % 2)) {
-				count++;
-			}
-			n = n / 2;
-		}
-		return count;
-	};
+	function duplicateCount(text) {
+		const obj = {};
+		text
+			.toLowerCase()
+			.split('')
+			.map(item => {
+				if (obj[item]) {
+					obj[item] += 1;
+				} else {
+					obj[item] = 1;
+				}
+			});
+		return Object.values(obj).filter(item => item > 1).length;
+	}
 
-	console.log(countBits(9));
-	console.log(countBits(12));
+	console.log(duplicateCount('indivisibility'));
+	console.log(duplicateCount('Indivisibilities'));
 
 	return (
 		<div className='App'>
