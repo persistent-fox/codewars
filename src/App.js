@@ -2,12 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function findNextSquare(sq) {
-		return Number.isInteger(Math.sqrt(sq)) ? (Math.sqrt(sq) + 1) ** 2 : -1;
+	function solution(str, ending) {
+		return str.slice(-ending.length ? -ending.length : str.length) === ending;
 	}
-
-	console.log(findNextSquare(121));
-	console.log(findNextSquare(114));
+	console.log(solution('abc', ''));
+	console.log(solution('keck', ''));
 
 	return (
 		<div className='App'>
