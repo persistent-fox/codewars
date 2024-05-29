@@ -2,12 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function solution(str, ending) {
-		return str.slice(-ending.length ? -ending.length : str.length) === ending;
-	}
-	console.log(solution('abc', ''));
-	console.log(solution('keck', ''));
-
 	return (
 		<div className='App'>
 			<header className='App-header'>
