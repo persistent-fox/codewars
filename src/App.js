@@ -2,10 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	const binaryArrayToNumber = arr => {
-		return parseInt(arr.join(''), 2);
-	};
-	console.log(binaryArrayToNumber([0, 0, 0, 1]));
+	const reverseWords = str =>
+		str
+			.split(' ')
+			.map(item => item.split('').reverse().join(''))
+			.join(' ');
+
+	console.log(reverseWords('This is an example!'));
+
 	return (
 		<div className='App'>
 			<header className='App-header'>
