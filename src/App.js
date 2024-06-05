@@ -2,13 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	const reverseWords = str =>
-		str
-			.split(' ')
-			.map(item => item.split('').reverse().join(''))
-			.join(' ');
+	function divisors(num) {
+		const arr = [];
+		for (let i = 2; i < num; i++) {
+			if (num % i === 0) {
+				arr.push(i);
+			}
+		}
+		return arr.length ? arr : `${num} is prime`;
+	}
 
-	console.log(reverseWords('This is an example!'));
+	divisors(12);
 
 	return (
 		<div className='App'>
