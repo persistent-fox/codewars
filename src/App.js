@@ -2,17 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function divisors(num) {
-		const arr = [];
-		for (let i = 2; i < num; i++) {
-			if (num % i === 0) {
-				arr.push(i);
-			}
-		}
-		return arr.length ? arr : `${num} is prime`;
+	function getWord(str, n) {
+		return str
+			.split(' ')
+			.slice(n, n + 1)
+			.join(' ');
 	}
-
-	divisors(12);
+	console.log(getWord('Hello world from codewars', 2));
 
 	return (
 		<div className='App'>
