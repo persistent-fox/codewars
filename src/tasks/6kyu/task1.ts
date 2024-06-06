@@ -7,5 +7,5 @@
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
 const uniqueInOrder = iterable => {
-	return [...iterable].filter((a, i) => a !== iterable[i - 1]);
+	return [...iterable].filter((item, index) => item !== iterable[index - 1]);
 };
