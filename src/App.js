@@ -2,13 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function getWord(str, n) {
-		return str
-			.split(' ')
-			.slice(n, n + 1)
-			.join(' ');
-	}
-	console.log(getWord('Hello world from codewars', 2));
+	const changeArr = arr => arr.map((item, index) => `${index + 1}: ${item}`);
+
+	console.log(changeArr(['a', 'b', 'c']));
 
 	return (
 		<div className='App'>
