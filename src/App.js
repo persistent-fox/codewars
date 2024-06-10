@@ -2,9 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	const changeArr = arr => arr.map((item, index) => `${index + 1}: ${item}`);
+	function stray(arr) {
+		return arr.reduce((acc, item) => {
+			return item === acc ? acc : item;
+		});
+	}
 
-	console.log(changeArr(['a', 'b', 'c']));
+	console.log(stray([1, 1, 2, 1, 1]));
 
 	return (
 		<div className='App'>
