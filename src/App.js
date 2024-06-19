@@ -2,11 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function removeUrlAnchor(url) {
-		return url.split('#').length >= 2 ? url.split('#').slice(0, 1).join('') : url;
-	}
+	const isAnagram = (test, original) => {
+		return test.toUpperCase().split('').sort().join('') === original.toUpperCase().split('').sort().join('');
+	};
 
-	console.log(removeUrlAnchor('www.codewars.com'));
+	console.log(isAnagram('VasZfJkTcIensDEEqkB', 'DqZesknBcIstfkTaJEV'));
 
 	return (
 		<div className='App'>
