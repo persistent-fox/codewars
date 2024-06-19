@@ -2,16 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	const sequenceSum = (begin, end, step) => {
-		let count = 0;
-		for (let i = begin; i <= end; i += step) {
-			count += i;
-		}
-		return count;
-	};
+	function removeUrlAnchor(url) {
+		return url.split('#').length >= 2 ? url.split('#').slice(0, 1).join('') : url;
+	}
 
-	console.log(sequenceSum(2, 6, 2));
-	console.log(sequenceSum(1, 5, 3));
+	console.log(removeUrlAnchor('www.codewars.com'));
 
 	return (
 		<div className='App'>
