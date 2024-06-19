@@ -2,20 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function arithmetic(a, b, operator) {
-		switch (operator) {
-			case 'add':
-				return a + b;
-			case 'subtract':
-				return a - b;
-			case 'multiply':
-				return a * b;
-			default:
-				return a / b;
+	const sequenceSum = (begin, end, step) => {
+		let count = 0;
+		for (let i = begin; i <= end; i += step) {
+			count += i;
 		}
-	}
+		return count;
+	};
 
-	console.log(arithmetic(5, 6, 'add'));
+	console.log(sequenceSum(2, 6, 2));
+	console.log(sequenceSum(1, 5, 3));
 
 	return (
 		<div className='App'>
