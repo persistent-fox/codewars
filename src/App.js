@@ -2,11 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	const isAnagram = (test, original) => {
-		return test.toUpperCase().split('').sort().join('') === original.toUpperCase().split('').sort().join('');
-	};
+	function twoOldestAges(ages) {
+		const arr = ages.sort((a, b) => a - b);
+		return arr.slice(-2);
+	}
 
-	console.log(isAnagram('VasZfJkTcIensDEEqkB', 'DqZesknBcIstfkTaJEV'));
+	console.log(twoOldestAges([1, 2, 10, 8]));
 
 	return (
 		<div className='App'>
