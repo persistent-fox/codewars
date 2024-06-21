@@ -2,12 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function twoOldestAges(ages) {
-		const arr = ages.sort((a, b) => a - b);
-		return arr.slice(-2);
+	function reverseLetter(str) {
+		return str
+			.replace(/[^a-zA-Z]/g, '')
+			.split('')
+			.reverse()
+			.join('');
 	}
 
-	console.log(twoOldestAges([1, 2, 10, 8]));
+	console.log(reverseLetter('ultr53o?n'));
 
 	return (
 		<div className='App'>
