@@ -2,15 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function reverseLetter(str) {
-		return str
-			.replace(/[^a-zA-Z]/g, '')
+	function sumDigits(number) {
+		return Math.abs(number)
+			.toString()
 			.split('')
-			.reverse()
-			.join('');
+			.reduce((acc, el) => acc + +el, 0);
 	}
 
-	console.log(reverseLetter('ultr53o?n'));
+	console.log(sumDigits(99));
+	console.log(sumDigits(-32));
 
 	return (
 		<div className='App'>
