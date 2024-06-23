@@ -2,15 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function sumDigits(number) {
-		return Math.abs(number)
-			.toString()
-			.split('')
-			.reduce((acc, el) => acc + +el, 0);
+	function validatePIN(pin) {
+		if (pin.length === 4 || pin.length === 6) {
+			return pin.split('').reduce((acc, curr) => {
+				console.log(Number(curr) % 1);
+				if (Number(curr) % 1 !== 0 || curr === ' ') acc = false;
+				return acc;
+			}, true);
+		} else {
+			return false;
+		}
 	}
 
-	console.log(sumDigits(99));
-	console.log(sumDigits(-32));
+	console.log(validatePIN('-1.234'));
 
 	return (
 		<div className='App'>
