@@ -2,10 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function validatePIN(pin) {
-		return /^\d+$/.test(pin) && (pin.length === 4 || pin.length === 6);
+	function maxMultiple(divisor, bound) {
+		return bound - (bound % divisor);
 	}
-	console.log(validatePIN('-1.234'));
+
+	console.log(maxMultiple(2, 7));
 
 	return (
 		<div className='App'>
