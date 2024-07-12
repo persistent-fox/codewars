@@ -2,13 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function minValue(val) {
-		const arr = Array.from(new Set(val)).sort((a, b) => a - b);
-		return +arr.join('');
+	function flattenAndSort(array) {
+		return array.flat(Infinity).sort((a, b) => a - b);
 	}
-	console.log(minValue([5, 7, 5, 9, 7]));
-	console.log(minValue([1, 3, 1]));
-	console.log(minValue([1, 9, 3, 1, 7, 4, 6, 6, 7]));
+	console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
 
 	return (
 		<div className='App'>
