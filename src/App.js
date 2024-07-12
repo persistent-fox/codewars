@@ -2,10 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-	function flattenAndSort(array) {
-		return array.flat(Infinity).sort((a, b) => a - b);
+	function sumOfMinimums(arr) {
+		return arr.reduce((acc, el) => acc + Math.min(...el), 0);
 	}
-	console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
+
+	console.log(
+		sumOfMinimums([
+			[1, 2, 3, 4, 5],
+			[5, 6, 7, 8, 9],
+			[20, 21, 34, 56, 100],
+		])
+	);
 
 	return (
 		<div className='App'>
